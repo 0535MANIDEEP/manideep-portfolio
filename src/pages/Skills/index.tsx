@@ -153,7 +153,7 @@ export default function SkillsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-12"
+            className="mb-16"
           >
             <p className="section-label">Capabilities</p>
             <h1 className="mb-4">

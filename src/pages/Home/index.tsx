@@ -470,7 +470,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-16"
           >
             <p className="section-label">Portfolio</p>
             <div className="flex items-end justify-between flex-wrap gap-4">
@@ -500,7 +500,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-16"
           >
             <p className="section-label">Highlights</p>
             <h2>Everything In One <span className="gradient-text">Place</span></h2>

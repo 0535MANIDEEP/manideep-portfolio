@@ -169,7 +169,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-16 text-center"
           >
             <p className="section-label justify-center">What I Stand For</p>
             <h2>Core <span className="gradient-text">Values</span></h2>
@@ -210,7 +210,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-16 text-center"
           >
             <p className="section-label justify-center">My Journey</p>
             <h2>Career <span className="gradient-text">Timeline</span></h2>
@@ -271,7 +271,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-16 text-center"
           >
             <p className="section-label justify-center">Behind the Code</p>
             <h2>Fun <span className="gradient-text">Facts</span></h2>

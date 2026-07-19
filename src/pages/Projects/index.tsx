@@ -147,7 +147,7 @@ export default function ProjectsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-12"
+            className="mb-16"
           >
             <p className="section-label">Portfolio</p>
             <h1 className="mb-4">
