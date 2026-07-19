@@ -41,7 +41,7 @@ export default function ExperiencePage() {
               Professional <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
-              2+ years of hands-on experience building real-world applications, working with teams, and delivering results.
+               Hands-on experience building real-world applications, working with teams, and delivering results.
             </p>
           </motion.div>
 
