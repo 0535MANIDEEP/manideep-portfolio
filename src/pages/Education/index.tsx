@@ -11,15 +11,15 @@ export default function EducationPage() {
   return (
     <>
       <Helmet>
-        <title>Education — Podagatla Rajendra</title>
-        <meta name="description" content="Education background of Podagatla Rajendra — B.Tech CSE at Sandip University." />
+        <title>Education — Manideep Daram</title>
+        <meta name="description" content="Education background of Manideep Daram — B.Tech CSE at Vidya Jyothi Institute of Technology, Hyderabad." />
       </Helmet>
 
       <section className="section" aria-label="Education">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10 md:mb-12">
             <p className="section-label">Academic Background</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Education & <span className="gradient-text">Learning</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
@@ -27,14 +27,15 @@ export default function EducationPage() {
             </p>
           </motion.div>
 
-          {education.map((edu, i) => (
-            <motion.div
-              key={edu.id}
-              className="card p-8 mb-8 hoverable gradient-border"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
+          <div className="flex flex-col gap-6 md:gap-8">
+            {education.map((edu, i) => (
+              <motion.div
+                key={edu.id}
+                className="card card-pad-lg hoverable gradient-border"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
             >
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
@@ -101,6 +102,7 @@ export default function EducationPage() {
               </div>
             </motion.div>
           ))}
+          </div>
         </div>
       </section>
     </>

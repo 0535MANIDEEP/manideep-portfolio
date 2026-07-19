@@ -4,21 +4,20 @@
 
 import { motion } from 'framer-motion';
 import { Mail, ArrowUpRight } from 'lucide-react';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { NAV_LINKS } from '../../constants';
 
 const socialLinks = [
-  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/podagatlarajendra' },
-  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com/in/podagatlarajendra' },
-  { icon: FaTwitter, label: 'Twitter', href: 'https://twitter.com/podagatlaraj' },
-  { icon: Mail, label: 'Email', href: 'mailto:rajendra@example.com' },
+  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/0535MANIDEEP' },
+  { icon: FaLinkedinIn, label: 'LinkedIn', href: 'https://linkedin.com/in/manideep-daram' },
+  { icon: Mail, label: 'Email', href: 'mailto:manideepdaram@gmail.com' },
 ];
 
 export default function Footer() {
   return (
     <footer
-      className="relative mt-24"
+      className="relative mt-16"
       style={{ borderTop: '1px solid var(--color-border)', background: 'var(--color-dark)' }}
       role="contentinfo"
     >
@@ -29,7 +28,7 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      <div className="container py-16">
+      <div className="container py-10 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Brand */}
@@ -43,17 +42,17 @@ export default function Footer() {
                   fontFamily: 'var(--font-heading)',
                 }}
               >
-                PR
+                MD
               </div>
               <span
                 className="font-semibold"
                 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}
               >
-                Podagatla Rajendra
+                Manideep Daram
               </span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-              Full Stack Developer building scalable, elegant web experiences from Hyderabad, India.
+              Software Engineer building scalable web apps with React, Node.js & TypeScript from Hyderabad, India.
             </p>
 
             {/* Availability */}
@@ -64,7 +63,7 @@ export default function Footer() {
                 aria-hidden="true"
               />
               <span className="text-xs" style={{ color: '#22c55e' }}>
-                Available for freelance & full-time roles
+                Open to SDE / Full-Stack / Frontend roles
               </span>
             </div>
 
@@ -136,11 +135,15 @@ export default function Footer() {
             <form
               onSubmit={(e) => { e.preventDefault(); }}
               className="flex gap-2"
+              aria-label="Newsletter subscription"
             >
+              <label htmlFor="newsletter-email" className="sr-only">Email address for newsletter</label>
               <input
+                id="newsletter-email"
                 type="email"
                 placeholder="your@email.com"
-                className="flex-1 px-3 py-2 rounded-lg text-sm outline-none"
+                aria-label="Email address for newsletter"
+                className="flex-1 px-4 py-2.5 rounded-lg text-sm outline-none"
                 style={{
                   background: 'var(--color-card)',
                   border: '1px solid var(--color-border)',
@@ -150,7 +153,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="btn btn-primary py-2 px-3 text-sm"
+                className="btn btn-primary px-3 py-2 text-sm"
                 aria-label="Subscribe"
               >
                 <ArrowUpRight size={14} />
@@ -161,15 +164,15 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-12 pt-6"
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-10 md:mt-12 pt-6"
           style={{ borderTop: '1px solid var(--color-border)' }}
         >
           <p className="text-xs" style={{ color: 'var(--color-text-subtle)' }}>
-            © {new Date().getFullYear()} Podagatla Rajendra. Crafted with ❤️ in Hyderabad.
+            © {new Date().getFullYear()} Manideep Daram. Crafted with ❤️ in Hyderabad.
           </p>
           <div className="flex items-center gap-4 text-xs" style={{ color: 'var(--color-text-subtle)' }}>
-            <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
+            <NavLink to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</NavLink>
+            <NavLink to="/accessibility" className="hover:text-primary transition-colors">Accessibility</NavLink>
           </div>
         </div>
       </div>

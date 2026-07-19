@@ -19,6 +19,8 @@ const Education = lazy(() => import('../pages/Education'));
 const Services = lazy(() => import('../pages/Services'));
 const Testimonials = lazy(() => import('../pages/Testimonials'));
 const Contact = lazy(() => import('../pages/Contact'));
+const Accessibility = lazy(() => import('../pages/Accessibility'));
+const Privacy = lazy(() => import('../pages/Privacy'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 // Skeleton fallback for lazy routes
@@ -153,14 +155,36 @@ export default function AppRouter() {
             </MainLayout>
           }
         />
+        <Route
+          path="/accessibility"
+          element={
+            <MainLayout>
+              <Suspense fallback={<PageSkeleton />}>
+                <Accessibility />
+              </Suspense>
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <MainLayout>
+              <Suspense fallback={<PageSkeleton />}>
+                <Privacy />
+              </Suspense>
+            </MainLayout>
+          }
+        />
 
         {/* 404 */}
         <Route
           path="*"
           element={
-            <Suspense fallback={<PageSkeleton />}>
-              <NotFound />
-            </Suspense>
+            <MainLayout>
+              <Suspense fallback={<PageSkeleton />}>
+                <NotFound />
+              </Suspense>
+            </MainLayout>
           }
         />
       </Routes>

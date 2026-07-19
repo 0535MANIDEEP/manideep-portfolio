@@ -18,7 +18,7 @@ export default function ProjectDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{project.title} — Podagatla Rajendra</title>
+        <title>{project.title} — Manideep Daram</title>
         <meta name="description" content={project.shortDescription} />
       </Helmet>
 
@@ -40,7 +40,7 @@ export default function ProjectDetailPage() {
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <span className="badge">{project.category}</span>
               <span
-                className="px-2 py-1 rounded-full text-xs"
+                className="px-2.5 py-1 rounded-full text-xs"
                 style={{
                   background: project.status === 'completed' ? 'rgba(34,197,94,0.1)' : 'rgba(255,193,7,0.1)',
                   color: project.status === 'completed' ? '#22c55e' : '#FFC107',
@@ -105,7 +105,7 @@ export default function ProjectDetailPage() {
               transition={{ delay: 0.3 }}
             >
               {project.stats.map(({ label, value }) => (
-                <div key={label} className="card p-5 text-center">
+                <div key={label} className="card card-pad-sm text-center">
                   <p className="text-2xl font-bold mb-1" style={{ fontFamily: 'var(--font-number)', color: 'var(--color-primary)' }}>
                     {value}
                   </p>
@@ -124,7 +124,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="card p-6"
+                className="card card-pad"
               >
                 <h2 className="text-xl mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                   Problem Statement
@@ -137,7 +137,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="card p-6"
+                className="card card-pad"
               >
                 <h2 className="text-xl mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                   About the Project
@@ -150,7 +150,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="card p-6"
+                className="card card-pad"
                 style={{ background: 'linear-gradient(135deg, rgba(255,122,0,0.04), var(--color-card))' }}
               >
                 <h2 className="text-xl mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
@@ -164,7 +164,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="card p-6"
+                className="card card-pad"
               >
                 <h2 className="text-xl mb-4" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                   Key Features
@@ -187,7 +187,7 @@ export default function ProjectDetailPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="card p-5"
+                className="card card-pad-sm"
               >
                 <h3 className="text-sm font-semibold mb-3 uppercase tracking-wider" style={{ fontFamily: 'var(--font-code)', color: 'var(--color-text-muted)' }}>
                   Tech Stack
@@ -205,7 +205,7 @@ export default function ProjectDetailPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="card p-5"
+                  className="card card-pad-sm"
                 >
                   <h3 className="text-sm font-semibold mb-3 uppercase tracking-wider" style={{ fontFamily: 'var(--font-code)', color: 'var(--color-text-muted)' }}>
                     Screenshots
@@ -231,7 +231,7 @@ export default function ProjectDetailPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 pt-8"
+            className="mt-10 md:mt-12 pt-8 pb-4"
             style={{ borderTop: '1px solid var(--color-border)' }}
           >
             <div className="flex items-center justify-between">

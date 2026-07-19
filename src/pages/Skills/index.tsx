@@ -20,16 +20,15 @@ import type { SkillCategory } from '../../types';
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
-const CATEGORIES: SkillCategory[] = ['Frontend', 'Backend', 'Database', 'Cloud', 'DevOps', 'AI/ML', 'Languages', 'Tools'];
+const CATEGORIES: SkillCategory[] = ['Frontend', 'Backend', 'Data', 'Cloud', 'DevOps', 'Tools'];
 
 const techIcons: Record<string, string> = {
-  react: '⚛️', typescript: '📘', nextjs: '▲', tailwind: '🎨', redux: '🔮', framer: '🎞️',
-  nodejs: '🟢', express: '🚀', socketio: '🔌', api: '🔗', graphql: '◈',
-  mongodb: '🍃', postgresql: '🐘', redis: '🔴', prisma: '◆',
-  aws: '☁️', vercel: '▲', docker: '🐳', git: '📦', cicd: '⚙️',
-  python: '🐍', tensorflow: '🧠', opencv: '👁️', gemini: '✨',
-  javascript: '📜', sql: '🗄️',
-  postman: '📮', figma: '🎨',
+  react: '⚛️', typescript: '📘', vuejs: '💚', javascript: '📜',
+  nodejs: '🟢', express: '🚀', api: '🔗', jwt: '🔐',
+  mongodb: '🍃', postgresql: '🐘', mysql: '🐬',
+  dotnet: '🟣', angular: '🅰️',
+  aws: '☁️', docker: '🐳', git: '📦', githubactions: '⚙️',
+  jest: '🧪', postman: '📮',
 };
 
 function SkillCard({ skill, index }: { skill: typeof skills[0]; index: number }) {
@@ -37,7 +36,7 @@ function SkillCard({ skill, index }: { skill: typeof skills[0]; index: number })
 
   return (
     <motion.div
-      className="card p-4 hoverable"
+      className="card card-pad-sm hoverable"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -143,8 +142,8 @@ export default function SkillsPage() {
   return (
     <>
       <Helmet>
-        <title>Skills — Podagatla Rajendra</title>
-        <meta name="description" content="Technical skills of Podagatla Rajendra including React, Node.js, TypeScript, MongoDB, and more." />
+        <title>Skills — Manideep Daram</title>
+        <meta name="description" content="Technical skills of Manideep Daram including TypeScript, React, Vue, Node.js, Express, MongoDB, PostgreSQL, and more." />
       </Helmet>
 
       <section className="section" aria-label="Skills">
@@ -153,10 +152,10 @@ export default function SkillsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <p className="section-label">Capabilities</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Technical <span className="gradient-text">Skills</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
@@ -165,14 +164,14 @@ export default function SkillsPage() {
           </motion.div>
 
           {/* Radar Chart + Top Stats */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 md:mb-12">
             <motion.div
-              className="card p-8"
+              className="card card-pad-lg"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-xl mb-6" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
+              <h2 className="text-xl mb-4 md:mb-6" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                 Skill Radar
               </h2>
               <div className="chart-container">
@@ -181,12 +180,12 @@ export default function SkillsPage() {
             </motion.div>
 
             <motion.div
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-5"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <h2 className="text-xl" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
+              <h2 className="text-xl mb-2" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                 Proficiency Breakdown
               </h2>
               {CATEGORIES.map((cat) => {
@@ -220,12 +219,12 @@ export default function SkillsPage() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
             {(['All', ...CATEGORIES] as const).map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat as SkillCategory | 'All')}
-                className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 hoverable"
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hoverable"
                 style={{
                   background: activeCategory === cat ? 'linear-gradient(135deg, #FF7A00, #FFC107)' : 'var(--color-card)',
                   color: activeCategory === cat ? '#000' : 'var(--color-text-muted)',
@@ -239,7 +238,7 @@ export default function SkillsPage() {
 
           {/* Skills Grid */}
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
             layout
           >
             {filtered.map((skill, i) => (

@@ -23,33 +23,33 @@ const funFacts = [
 
 const timeline = [
   {
-    year: '2022',
-    title: 'The Beginning',
-    description: 'Wrote my first line of HTML. Discovered the joy of making things work in a browser. Immediately obsessed.',
-    tag: 'Origin Story',
+    year: '2020',
+    title: 'Started B.Tech at VJIT',
+    description: 'Began my Computer Science Engineering journey at Vidya Jyothi Institute of Technology, Hyderabad. Started with C programming and fell in love with coding.',
+    tag: 'Education',
   },
   {
-    year: '2023',
-    title: 'Going Full Stack',
-    description: 'Mastered React, Node.js, and MongoDB. Built MediFusion — a healthcare platform that handles real patient data.',
-    tag: 'Growth',
-  },
-  {
-    year: '2024',
-    title: 'Cognifyz Internship',
-    description: 'Joined Cognifyz Technologies as a Full Stack intern. Worked on enterprise-level applications, AWS deployments, and real-world CI/CD pipelines.',
+    year: '2023–24',
+    title: 'Full Stack Intern at Crystalline Tech',
+    description: 'Built a risk-management SPA with Vue + TypeScript, migrated legacy JavaScript to TypeScript, and integrated AWS S3 during my internship at Crystalline Software Technologies.',
     tag: 'Professional',
   },
   {
     year: '2024',
-    title: 'AI Integration',
-    description: 'Built Smart Resume Generator using Google Gemini API. Discovered my passion for integrating AI into practical tools.',
-    tag: 'Innovation',
+    title: 'Graduated B.Tech CSE',
+    description: 'Completed Computer Science Engineering at VJIT. Earned Cisco certifications in Python, Java, and C. Started contributing to open-source and building full-stack projects.',
+    tag: 'Milestone',
   },
   {
-    year: '2024–Now',
-    title: 'Sandip University + Freelance',
-    description: 'Pursuing B.Tech in CSE while taking on freelance projects. Currently building Freelancer Hub and exploring advanced system design.',
+    year: '2025',
+    title: 'AI Data Engineering at Swecha',
+    description: 'Contributed to Viswam AI / Swecha Foundation (IIIT Hyderabad), curating Telugu datasets for LLM training with bias-mitigation workflows.',
+    tag: 'AI/ML',
+  },
+  {
+    year: '2025–Now',
+    title: 'Full-Stack .NET + Angular',
+    description: 'Currently learning and building with .NET and Angular, documenting the learning journey regularly on LinkedIn. Focused on enterprise-grade full-stack development.',
     tag: 'Present',
   },
 ];
@@ -58,8 +58,8 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About — Podagatla Rajendra</title>
-        <meta name="description" content="Learn about Podagatla Rajendra's journey as a Full Stack Developer, core values, and professional timeline." />
+        <title>About — Manideep Daram</title>
+        <meta name="description" content="Learn about Manideep Daram's journey as a Software Engineer, including internship experience, DSA problem-solving, and technical skills." />
       </Helmet>
 
       {/* Hero */}
@@ -74,7 +74,7 @@ export default function AboutPage() {
               About Me
             </motion.p>
             <motion.h1
-              className="mb-6"
+              className="mb-6 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -82,7 +82,7 @@ export default function AboutPage() {
               Building at the intersection of <span className="gradient-text">engineering</span> and <span className="gradient-text">design</span>
             </motion.h1>
             <motion.p
-              className="text-lg leading-relaxed mb-8"
+              className="text-lg leading-relaxed mb-6 md:mb-8"
               style={{ color: 'var(--color-text-muted)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,22 +93,22 @@ export default function AboutPage() {
 
             {/* Personal Info Grid */}
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-3 gap-4"
+              className="grid grid-cols-2 md:grid-cols-3 gap-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
               {[
-                { label: 'Name', value: 'Podagatla Rajendra' },
-                { label: 'Role', value: 'Full Stack Developer' },
-                { label: 'Experience', value: '2+ Years' },
-                { label: 'Education', value: 'B.Tech CSE (Hons.)' },
-                { label: 'University', value: 'Sandip University' },
-                { label: 'Location', value: 'Hyderabad, India' },
+                { label: 'Name', value: 'Manideep Daram' },
+                { label: 'Role', value: 'Software Engineer' },
+                { label: 'GPA', value: '8.53 CGPA' },
+                { label: 'Education', value: 'B.Tech CSE' },
+                { label: 'University', value: 'VJIT, Hyderabad' },
+                { label: 'DSA Problems', value: '100+ Solved' },
               ].map(({ label, value }) => (
                 <div
                   key={label}
-                  className="card p-4"
+                  className="card card-pad-sm"
                 >
                   <p className="text-xs mb-1" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-code)' }}>{label}</p>
                   <p className="text-sm font-semibold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-heading)' }}>{value}</p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div
-              className="card p-8"
+              className="card card-pad-lg"
               style={{ background: 'linear-gradient(135deg, rgba(255,122,0,0.06), var(--color-card))' }}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -142,7 +142,7 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              className="card p-8"
+              className="card card-pad-lg"
               style={{ background: 'linear-gradient(135deg, rgba(255,193,7,0.06), var(--color-card))' }}
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -169,7 +169,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-12 text-center"
           >
             <p className="section-label justify-center">What I Stand For</p>
             <h2>Core <span className="gradient-text">Values</span></h2>
@@ -181,7 +181,7 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={v.title}
-                  className="card p-6 text-center gradient-border"
+                  className="card card-pad text-center gradient-border"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -210,7 +210,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-12 text-center"
           >
             <p className="section-label justify-center">My Journey</p>
             <h2>Career <span className="gradient-text">Timeline</span></h2>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Card */}
-                  <div className="flex-1 card p-5">
+                  <div className="flex-1 card card-pad">
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <span
                         className="text-xs font-bold"
@@ -252,7 +252,7 @@ export default function AboutPage() {
                       </span>
                       <span className="badge">{item.tag}</span>
                     </div>
-                    <h4 className="mb-1.5" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
+                    <h4 className="mb-2" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
                       {item.title}
                     </h4>
                     <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{item.description}</p>
@@ -271,19 +271,19 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-12 text-center"
           >
             <p className="section-label justify-center">Behind the Code</p>
             <h2>Fun <span className="gradient-text">Facts</span></h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {funFacts.map((fact, i) => {
               const Icon = fact.icon;
               return (
                 <motion.div
                   key={fact.label}
-                  className="card p-6 text-center"
+                  className="card card-pad text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

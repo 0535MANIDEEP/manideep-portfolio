@@ -42,6 +42,7 @@ export interface Skill {
 export type SkillCategory =
   | 'Frontend'
   | 'Backend'
+  | 'Data'
   | 'Database'
   | 'Cloud'
   | 'DevOps'

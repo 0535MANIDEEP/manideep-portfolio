@@ -152,7 +152,7 @@ function StatCard({ stat, index }: { stat: typeof STATS[0]; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="card p-6 text-center gradient-border"
+      className="card card-pad text-center gradient-border"
     >
       <p
         className="text-3xl font-bold mb-1"
@@ -200,7 +200,7 @@ function FeaturedProjectCard({ project, index }: { project: typeof projects[0]; 
       </div>
 
       {/* Content */}
-      <div className="p-5">
+      <div className="card-pad">
         <h3
           className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-200"
           style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}
@@ -254,17 +254,16 @@ function FeaturedProjectCard({ project, index }: { project: typeof projects[0]; 
 // ─── MAIN HOME PAGE ───────────────────────────────────────────
 export default function HomePage() {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/podagatlarajendra', label: 'GitHub' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/podagatlarajendra', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com/podagatlaraj', label: 'Twitter' },
-    { icon: FaEnvelope, href: 'mailto:rajendra@example.com', label: 'Email' },
+    { icon: FaGithub, href: 'https://github.com/0535MANIDEEP', label: 'GitHub' },
+    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/manideep-daram', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:manideepdaram@gmail.com', label: 'Email' },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Podagatla Rajendra — Full Stack Developer</title>
-        <meta name="description" content="Full Stack Developer with 2+ years of experience. Building scalable web applications with React, Node.js, and modern technologies." />
+        <title>Manideep Daram — Software Engineer</title>
+        <meta name="description" content="Software Engineer with internship experience, 100+ DSA problems solved, and real-world GitHub projects. Open to SDE / Full-Stack / Frontend roles." />
       </Helmet>
 
       {/* ─── HERO SECTION ─────────────────────────────── */}
@@ -298,10 +297,10 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 mb-6"
+              className="inline-flex items-center gap-2 mb-4 md:mb-6"
             >
               <div
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-xs"
                 style={{
                   background: 'rgba(34,197,94,0.1)',
                   border: '1px solid rgba(34,197,94,0.2)',
@@ -316,19 +315,19 @@ export default function HomePage() {
 
             {/* Main Heading */}
             <motion.h1
-              className="mb-4"
+              className="mb-4 md:mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Hi, I'm{' '}
-              <span className="gradient-text">Rajendra</span>
+              <span className="gradient-text">Manideep</span>
               <br />
               <span style={{ color: 'var(--color-text)' }}>I Build </span>
-              <span className="gradient-text">Digital</span>
+              <span className="gradient-text">Scalable</span>
               <br />
-              <span style={{ color: 'var(--color-text)' }}>Experiences</span>
+              <span style={{ color: 'var(--color-text)' }}>Web Apps</span>
             </motion.h1>
 
             {/* Typing Animation */}
@@ -336,7 +335,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-4 md:mb-6"
             >
               <span
                 className="text-lg font-medium"
@@ -350,10 +349,9 @@ export default function HomePage() {
               >
                 <TypeAnimation
                   sequence={[
-                    'Full Stack Developer', 2000,
-                    'React Specialist', 2000,
-                    'Node.js Engineer', 2000,
-                    'UI/UX Enthusiast', 2000,
+                    'Software Engineer', 2000,
+                    'React Developer', 2000,
+                    'Full-Stack Developer', 2000,
                     'Problem Solver', 2000,
                   ]}
                   repeat={Infinity}
@@ -364,7 +362,7 @@ export default function HomePage() {
 
             {/* Bio */}
             <motion.p
-              className="text-base mb-8 max-w-xl leading-relaxed"
+              className="text-base mb-6 md:mb-8 max-w-xl leading-relaxed"
               style={{ color: 'var(--color-text-muted)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -375,7 +373,7 @@ export default function HomePage() {
 
             {/* CTAs */}
             <motion.div
-              className="flex flex-wrap items-center gap-4 mb-10"
+              className="flex flex-wrap items-center gap-4 mb-6 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
@@ -383,7 +381,7 @@ export default function HomePage() {
               <Link to="/projects" className="btn btn-primary hoverable">
                 View My Work <ArrowRight size={16} />
               </Link>
-              <a href="/resume.pdf" download className="btn btn-outline hoverable">
+              <a href="/manideep_daram_resume.pdf" download="ManideepDaram_Resume.pdf" className="btn btn-outline hoverable">
                 <Download size={16} /> Download Resume
               </a>
               <Link to="/contact" className="btn btn-ghost hoverable">
@@ -423,7 +421,7 @@ export default function HomePage() {
                 className="text-xs ml-2"
                 style={{ color: 'var(--color-text-subtle)', fontFamily: 'var(--font-code)' }}
               >
-                📍 Hyderabad, India
+                📍 Hyderabad, Telangana
               </span>
             </motion.div>
           </div>
@@ -455,7 +453,7 @@ export default function HomePage() {
       {/* ─── STATS SECTION ────────────────────────────── */}
       <section className="section" aria-label="Statistics">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
             {STATS.map((stat, i) => (
               <StatCard key={stat.label} stat={stat} index={i} />
             ))}
@@ -470,7 +468,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <p className="section-label">Portfolio</p>
             <div className="flex items-end justify-between flex-wrap gap-4">
@@ -500,7 +498,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <p className="section-label">Highlights</p>
             <h2>Everything In One <span className="gradient-text">Place</span></h2>
@@ -509,22 +507,22 @@ export default function HomePage() {
           <div className="bento-grid">
             {/* Experience Card */}
             <motion.div
-              className="card p-6 bento-cell-wide gradient-border"
+              className="card card-pad bento-cell-wide gradient-border"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <p className="section-label mb-3">Work Experience</p>
+              <p className="section-label">Work Experience</p>
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
-                Cognifyz Technologies
+                Crystalline Software Technologies
               </h3>
-              <p className="text-sm mb-3" style={{ color: 'var(--color-primary)' }}>Full Stack Development Intern</p>
+              <p className="text-sm mb-3" style={{ color: 'var(--color-primary)' }}>Software Engineer Intern (On-site)</p>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-                Engineered responsive front-end components using React.js & Tailwind CSS, reducing load times by 20%. Built robust backend APIs with Node.js and JWT authentication.
+                Built production-ready Vue.js components for enterprise apps, integrated REST APIs, collaborated in Agile sprints, and worked with backend teams on API contracts.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                {['React', 'Node.js', 'AWS', 'MongoDB'].map((t) => (
+                {['Vue.js', 'React.js', 'REST APIs', 'Git'].map((t) => (
                   <span key={t} className="badge">{t}</span>
                 ))}
               </div>
@@ -532,7 +530,7 @@ export default function HomePage() {
 
             {/* GitHub Stats */}
             <motion.div
-              className="card p-6"
+              className="card card-pad"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -541,9 +539,9 @@ export default function HomePage() {
               <p className="section-label mb-4">GitHub Stats</p>
               <div className="flex flex-col gap-4">
                 {[
-                  { label: 'Repositories', value: '25+' },
-                  { label: 'Total Commits', value: '1k+' },
-                  { label: 'Stars Earned', value: '150+' },
+                  { label: 'DSA Problems Solved', value: '100+' },
+                  { label: 'GitHub Repos', value: '10+' },
+                  { label: 'Technologies', value: '15+' },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex items-center justify-between">
                     <span className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{label}</span>
@@ -555,7 +553,7 @@ export default function HomePage() {
 
             {/* Tech Stack */}
             <motion.div
-              className="card p-6"
+              className="card card-pad"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -563,7 +561,7 @@ export default function HomePage() {
             >
               <p className="section-label mb-4">Core Stack</p>
               <div className="flex flex-wrap gap-2">
-                {['React.js', 'Node.js', 'TypeScript', 'MongoDB', 'Express', 'Redis', 'PostgreSQL', 'Docker'].map((tech) => (
+                {['React', 'Vue.js', 'JavaScript', 'Node.js', 'REST APIs', 'MongoDB', 'Git', '.NET'].map((tech) => (
                   <motion.span
                     key={tech}
                     className="badge hoverable"
@@ -577,7 +575,7 @@ export default function HomePage() {
 
             {/* Availability */}
             <motion.div
-              className="card p-6 flex flex-col justify-between"
+              className="card card-pad flex flex-col justify-between"
               style={{ background: 'linear-gradient(135deg, rgba(255,122,0,0.08), rgba(255,193,7,0.04))' }}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -592,20 +590,20 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}>
-                  Available for Projects
+                  Open to SDE Roles
                 </h3>
                 <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
-                  Looking for full-time roles and interesting freelance projects.
+                  Actively looking for Full-Stack / Frontend / SDE roles.
                 </p>
               </div>
-              <Link to="/contact" className="btn btn-primary mt-4 w-full justify-center text-sm">
+              <Link to="/contact" className="btn btn-primary mt-6 w-full justify-center text-sm">
                 Let's Work Together →
               </Link>
             </motion.div>
 
             {/* Quick Links */}
             <motion.div
-              className="card p-6"
+              className="card card-pad"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -622,7 +620,7 @@ export default function HomePage() {
                   <Link
                     key={label}
                     to={href}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm transition-all duration-200 hoverable"
+                    className="flex items-center justify-between px-4 py-3 rounded-lg text-sm transition-all duration-200 hoverable"
                     style={{ border: '1px solid var(--color-border)', color: 'var(--color-text-muted)' }}
                   >
                     <span>{label}</span>
@@ -642,7 +640,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden p-12 text-center"
+            className="relative rounded-2xl overflow-hidden p-8 md:p-12 lg:p-16 text-center"
             style={{ background: 'var(--color-card)', border: '1px solid var(--color-border)' }}
           >
             {/* Glow */}
@@ -653,11 +651,11 @@ export default function HomePage() {
             />
 
             <p className="section-label justify-center mb-4">Let's Build Together</p>
-            <h2 className="mb-4">
+            <h2 className="mb-6">
               Have a project in <span className="gradient-text">mind?</span>
             </h2>
-            <p className="text-base mb-8 max-w-md mx-auto" style={{ color: 'var(--color-text-muted)' }}>
-              I'm currently available for freelance work and full-time positions. Let's create something extraordinary together.
+            <p className="text-base mb-6 md:mb-8 max-w-md mx-auto" style={{ color: 'var(--color-text-muted)' }}>
+              I'm currently open to SDE / Full-Stack / Frontend roles. Let's connect and discuss how I can contribute to your team.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link to="/contact" className="btn btn-primary hoverable">

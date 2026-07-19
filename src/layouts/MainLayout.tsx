@@ -10,6 +10,7 @@ import Footer from '../components/layout/Footer';
 import CustomCursor from '../components/common/CustomCursor';
 import BackToTop from '../components/common/BackToTop';
 import CommandPalette from '../components/common/CommandPalette';
+import CookieConsent from '../components/common/CookieConsent';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -31,6 +32,14 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--color-bg)' }}>
+      {/* Skip to content — WCAG 2.4.1 */}
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Skip to main content
+      </a>
+
       <CustomCursor />
       <CommandPalette />
       <Navbar />
@@ -44,13 +53,13 @@ export default function MainLayout({ children }: MainLayoutProps) {
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
         className="flex-1 pt-16"
         id="main-content"
-        role="main"
       >
         {children}
       </motion.main>
 
       <Footer />
       <BackToTop />
+      <CookieConsent />
     </div>
   );
 }

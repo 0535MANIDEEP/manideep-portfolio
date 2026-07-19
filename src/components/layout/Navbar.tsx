@@ -57,13 +57,13 @@ export default function Navbar() {
                   fontFamily: 'var(--font-heading)',
                 }}
               >
-                PR
+                MD
               </motion.div>
               <span
                 className="font-semibold text-sm hidden sm:block"
                 style={{ fontFamily: 'var(--font-heading)', color: 'var(--color-text)' }}
               >
-                Podagatla Rajendra
+                Manideep Daram
               </span>
             </NavLink>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
                   <NavLink
                     to={link.href}
                     className={({ isActive }) =>
-                      `relative px-3 py-1.5 text-sm font-medium rounded-lg transition-colors duration-200 group ${
+                      `relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 group ${
                         isActive
                           ? 'text-primary'
                           : 'text-muted hover:text-white'
@@ -106,7 +106,7 @@ export default function Navbar() {
               {/* Command Palette */}
               <button
                 onClick={() => openCmd(true)}
-                className="hidden md:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs btn-ghost"
+                className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs btn-ghost"
                 style={{ border: '1px solid var(--color-border)' }}
                 aria-label="Open command palette"
               >
@@ -138,9 +138,9 @@ export default function Navbar() {
 
               {/* Resume CTA */}
               <a
-                href="/resume.pdf"
-                download
-                className="hidden md:flex btn btn-primary gap-2 py-2 px-4 text-sm hoverable"
+                href="/manideep_daram_resume.pdf"
+                download="ManideepDaram_Resume.pdf"
+                className="hidden md:flex btn btn-primary gap-2 px-4 py-2 text-sm hoverable"
                 aria-label="Download Resume"
               >
                 <Download size={14} />
@@ -153,6 +153,7 @@ export default function Navbar() {
                 className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center btn-ghost hoverable"
                 aria-label={drawerOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={drawerOpen}
+                aria-controls="mobile-drawer"
               >
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -186,10 +187,12 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setDrawerOpen(false)}
+              role="presentation"
             />
 
             {/* Drawer */}
             <motion.div
+              id="mobile-drawer"
               className="fixed top-0 right-0 bottom-0 z-50 w-72 flex flex-col"
               style={{
                 background: 'var(--color-card)',
@@ -233,7 +236,7 @@ export default function Navbar() {
                       <NavLink
                         to={link.href}
                         className={({ isActive }) =>
-                          `flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          `flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                             isActive ? 'text-primary bg-primary/10' : 'text-muted hover:text-white hover:bg-white/5'
                           }`
                         }
@@ -252,8 +255,8 @@ export default function Navbar() {
               {/* Drawer Footer */}
               <div className="p-4" style={{ borderTop: '1px solid var(--color-border)' }}>
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="/manideep_daram_resume.pdf"
+                  download="ManideepDaram_Resume.pdf"
                   className="flex items-center justify-center gap-2 w-full btn btn-primary text-sm"
                 >
                   <Download size={14} />

@@ -18,9 +18,9 @@ const commands = [
   { id: 'education', label: 'Go to Education', path: '/education', icon: GraduationCap, category: 'Navigation' },
   { id: 'services', label: 'Go to Services', path: '/services', icon: Settings, category: 'Navigation' },
   { id: 'contact', label: 'Go to Contact', path: '/contact', icon: Phone, category: 'Navigation' },
-  { id: 'resume', label: 'Download Resume', path: '/resume.pdf', icon: ArrowRight, category: 'Actions', download: true },
-  { id: 'github', label: 'Open GitHub', path: 'https://github.com/podagatlarajendra', icon: Code2, category: 'Social', external: true },
-  { id: 'linkedin', label: 'Open LinkedIn', path: 'https://linkedin.com/in/podagatlarajendra', icon: User, category: 'Social', external: true },
+  { id: 'resume', label: 'Download Resume', path: '/manideep_daram_resume.pdf', icon: ArrowRight, category: 'Actions', download: true },
+  { id: 'github', label: 'Open GitHub', path: 'https://github.com/0535MANIDEEP', icon: Code2, category: 'Social', external: true },
+  { id: 'linkedin', label: 'Open LinkedIn', path: 'https://linkedin.com/in/manideep-daram', icon: User, category: 'Social', external: true },
 ];
 
 interface Command {
@@ -85,9 +85,13 @@ export default function CommandPalette() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setOpen(false)}
+            role="presentation"
           />
           <motion.div
             className="command-box"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Command palette"
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
@@ -105,6 +109,7 @@ export default function CommandPalette() {
                 value={query}
                 onChange={(e) => { setQuery(e.target.value); setSelected(0); }}
                 placeholder="Search commands…"
+                aria-label="Search commands"
                 className="flex-1 bg-transparent outline-none text-sm"
                 style={{ color: 'var(--color-text)', fontFamily: 'var(--font-body)' }}
               />
@@ -120,14 +125,14 @@ export default function CommandPalette() {
             {/* Results */}
             <div className="max-h-80 overflow-y-auto p-2">
               {filtered.length === 0 ? (
-                <p className="text-center py-8 text-sm" style={{ color: 'var(--color-text-muted)' }}>
+                <p className="text-center py-8 text-sm" style={{ color: 'var(--color-text-muted)' }} aria-live="polite">
                   No results found
                 </p>
               ) : (
                 categories.map((cat) => (
                   <div key={cat} className="mb-2">
                     <p
-                      className="px-2 py-1 text-xs uppercase tracking-wider"
+                      className="px-3 py-1.5 text-xs uppercase tracking-wider"
                       style={{ color: 'var(--color-text-subtle)', fontFamily: 'var(--font-code)' }}
                     >
                       {cat}
@@ -142,7 +147,7 @@ export default function CommandPalette() {
                             key={cmd.id}
                             onClick={() => execute(cmd)}
                             onMouseEnter={() => setSelected(globalIdx)}
-                            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-sm transition-all duration-150"
+                            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-sm transition-all duration-150"
                             style={{
                               background: selected === globalIdx ? 'rgba(255,122,0,0.1)' : 'transparent',
                               color: selected === globalIdx ? 'var(--color-primary)' : 'var(--color-text)',
@@ -163,7 +168,7 @@ export default function CommandPalette() {
 
             {/* Footer hint */}
             <div
-              className="flex items-center gap-4 px-4 py-2.5 text-xs"
+              className="flex items-center gap-4 px-4 py-3 text-xs"
               style={{
                 borderTop: '1px solid var(--color-border)',
                 color: 'var(--color-text-muted)',

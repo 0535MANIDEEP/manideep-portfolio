@@ -15,10 +15,9 @@ export default function NotFoundPage() {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <div
-        className="min-h-screen flex items-center justify-center"
+      <main
+        className="min-h-screen flex items-center justify-center py-8 md:py-12"
         style={{ background: 'var(--color-bg)' }}
-        role="main"
         aria-label="404 page not found"
       >
         <div className="container text-center">
@@ -65,7 +64,7 @@ export default function NotFoundPage() {
 
           {/* Decorative */}
           <motion.div
-            className="mt-16 text-center"
+            className="mt-10 md:mt-12 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -78,7 +77,7 @@ export default function NotFoundPage() {
             </p>
           </motion.div>
         </div>
-      </div>
+      </main>
     </>
   );
 }

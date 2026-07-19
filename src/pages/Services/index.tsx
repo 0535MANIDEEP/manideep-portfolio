@@ -12,16 +12,16 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Services — Podagatla Rajendra</title>
-        <meta name="description" content="Full Stack Development, UI/UX, API Development, and AI Integration services offered by Podagatla Rajendra." />
+        <title>Services — Manideep Daram</title>
+        <meta name="description" content="Web Development, Full Stack Solutions, API Development, and Cloud services offered by Manideep Daram." />
       </Helmet>
 
       <section className="section" aria-label="Services">
         <div className="container">
           {/* Header */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-16 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10 md:mb-12 text-center">
             <p className="section-label justify-center">What I Offer</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Services & <span className="gradient-text">Solutions</span>
             </h1>
             <p className="text-lg max-w-xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
@@ -30,11 +30,11 @@ export default function ServicesPage() {
           </motion.div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 md:mb-12">
             {services.map((service, i) => (
               <motion.div
                 key={service.id}
-                className={`card p-6 hoverable relative overflow-hidden ${service.popular ? 'gradient-border' : ''}`}
+                className={`card card-pad hoverable relative overflow-hidden ${service.popular ? 'gradient-border' : ''}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function ServicesPage() {
 
           {/* CTA */}
           <motion.div
-            className="card p-10 text-center"
+            className="card card-pad-lg text-center"
             style={{ background: 'linear-gradient(135deg, rgba(255,122,0,0.06), var(--color-card))' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

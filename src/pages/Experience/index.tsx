@@ -24,8 +24,8 @@ export default function ExperiencePage() {
   return (
     <>
       <Helmet>
-        <title>Experience — Podagatla Rajendra</title>
-        <meta name="description" content="Professional experience of Podagatla Rajendra including internship at Cognifyz Technologies and freelance work." />
+        <title>Experience — Manideep Daram</title>
+        <meta name="description" content="Professional experience of Manideep Daram including development internship at Crystalline Software Technologies and AI data engineering at Viswam AI." />
       </Helmet>
 
       <section className="section" aria-label="Experience">
@@ -34,10 +34,10 @@ export default function ExperiencePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <p className="section-label">Work History</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Professional <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
@@ -54,7 +54,7 @@ export default function ExperiencePage() {
               aria-hidden="true"
             />
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-12">
               {experiences.map((exp, i) => (
                 <motion.div
                   key={exp.id}
@@ -76,9 +76,9 @@ export default function ExperiencePage() {
                   />
 
                   {/* Card */}
-                  <div className="card p-6 hoverable gradient-border">
+                  <div className="card card-pad hoverable gradient-border">
                     {/* Header Row */}
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-5">
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
                       {/* Logo */}
                       <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0" style={{ border: '1px solid var(--color-border)' }}>
                         <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-cover" />
@@ -124,12 +124,12 @@ export default function ExperiencePage() {
                       </div>
                     </div>
 
-                    <p className="text-sm mb-5 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
+                    <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
                       {exp.description}
                     </p>
 
                     {/* Responsibilities */}
-                    <div className="mb-5">
+                    <div className="mb-6">
                       <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-code)' }}>
                         Responsibilities
                       </h3>
@@ -144,7 +144,7 @@ export default function ExperiencePage() {
                     </div>
 
                     {/* Achievements */}
-                    <div className="mb-5">
+                    <div className="mb-6">
                       <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-code)' }}>
                         Key Achievements
                       </h3>

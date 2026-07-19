@@ -39,7 +39,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
         {/* Status Badge */}
         <span
-          className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-medium"
+          className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-medium"
           style={{
             background:
               project.status === 'completed'
@@ -79,7 +79,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       {/* Content */}
-      <div className="p-5">
+      <div className="card-pad">
         <div className="flex items-center justify-between mb-2">
           <span className="badge">{project.category}</span>
           <span className="text-xs" style={{ color: 'var(--color-text-subtle)', fontFamily: 'var(--font-code)' }}>{project.year}</span>
@@ -137,8 +137,8 @@ export default function ProjectsPage() {
   return (
     <>
       <Helmet>
-        <title>Projects — Podagatla Rajendra</title>
-        <meta name="description" content="Explore Podagatla Rajendra's portfolio of full stack projects including Freelancer Hub, Smart Resume Generator, and MediFusion." />
+        <title>Projects — Manideep Daram</title>
+        <meta name="description" content="Explore Manideep Daram's portfolio of full stack projects including BloodBankManagementSystem, Sutra-Code, and HyderabadHustlers." />
       </Helmet>
 
       <section className="section" aria-label="Projects">
@@ -147,10 +147,10 @@ export default function ProjectsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <p className="section-label">Portfolio</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Precision Engineered <span className="gradient-text">Solutions</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
@@ -163,7 +163,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10"
+            className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8"
           >
             {/* Search */}
             <div className="relative flex-1 max-w-sm">
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search projects…"
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl text-sm outline-none"
+                className="w-full pl-9 pr-4 py-3 rounded-xl text-sm outline-none"
                 style={{
                   background: 'var(--color-card)',
                   border: '1px solid var(--color-border)',
@@ -194,7 +194,7 @@ export default function ProjectsPage() {
                 <button
                   key={cat}
                   onClick={() => setCategory(cat)}
-                  className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 hoverable"
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hoverable"
                   style={{
                     background: category === cat ? 'linear-gradient(135deg, #FF7A00, #FFC107)' : 'var(--color-card)',
                     color: category === cat ? '#000' : 'var(--color-text-muted)',

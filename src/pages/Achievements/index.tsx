@@ -52,7 +52,7 @@ function StatCounter({ stat, index }: { stat: typeof stats[0]; index: number }) 
   return (
     <motion.div
       ref={ref}
-      className="card p-6 text-center"
+      className="card card-pad text-center"
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.1 }}
@@ -69,16 +69,16 @@ export default function AchievementsPage() {
   return (
     <>
       <Helmet>
-        <title>Achievements — Podagatla Rajendra</title>
-        <meta name="description" content="Awards, hackathons, certifications, and open source contributions by Podagatla Rajendra." />
+        <title>Achievements — Manideep Daram</title>
+        <meta name="description" content="Awards, certifications, and open source contributions by Manideep Daram." />
       </Helmet>
 
       <section className="section" aria-label="Achievements">
         <div className="container">
           {/* Header */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10 md:mb-12">
             <p className="section-label">Recognition</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               Milestones & <span className="gradient-text">Achievements</span>
             </h1>
             <p className="text-lg max-w-xl" style={{ color: 'var(--color-text-muted)' }}>
@@ -87,7 +87,7 @@ export default function AchievementsPage() {
           </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10 md:mb-12">
             {stats.map((s, i) => <StatCounter key={s.label} stat={s} index={i} />)}
           </div>
 
@@ -96,7 +96,7 @@ export default function AchievementsPage() {
             {achievements.map((a, i) => (
               <motion.div
                 key={a.id}
-                className="card p-6 hoverable gradient-border"
+                className="card card-pad hoverable gradient-border"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

@@ -30,7 +30,7 @@ function StarRating({ rating }: { rating: number }) {
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
     <div
-      className="card p-8 h-full flex flex-col"
+      className="card card-pad-lg h-full flex flex-col"
       style={{ minHeight: '320px' }}
     >
       {/* Quote Icon */}
@@ -72,8 +72,8 @@ export default function TestimonialsPage() {
   return (
     <>
       <Helmet>
-        <title>Testimonials — Podagatla Rajendra</title>
-        <meta name="description" content="What clients and colleagues say about working with Podagatla Rajendra." />
+        <title>Testimonials — Manideep Daram</title>
+        <meta name="description" content="What colleagues and collaborators say about working with Manideep Daram." />
       </Helmet>
 
       <section className="section" aria-label="Testimonials">
@@ -82,10 +82,10 @@ export default function TestimonialsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-12 text-center"
           >
             <p className="section-label justify-center">Social Proof</p>
-            <h1 className="mb-4">
+            <h1 className="mb-4 md:mb-6">
               What People <span className="gradient-text">Say</span>
             </h1>
             <p className="text-lg max-w-xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
@@ -98,7 +98,7 @@ export default function TestimonialsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-16"
+            className="mb-10 md:mb-12"
           >
             <Swiper
               modules={[Pagination, Autoplay]}
@@ -122,7 +122,7 @@ export default function TestimonialsPage() {
           </motion.div>
 
           {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
               { value: '100%', label: 'Client Satisfaction' },
               { value: '10+', label: 'Projects Delivered' },
@@ -131,7 +131,7 @@ export default function TestimonialsPage() {
             ].map(({ value, label }, i) => (
               <motion.div
                 key={label}
-                className="card p-6 text-center"
+                className="card card-pad text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

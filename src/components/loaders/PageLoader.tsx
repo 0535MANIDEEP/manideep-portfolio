@@ -79,7 +79,7 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
                 className="text-sm tracking-widest uppercase"
                 style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-code)' }}
               >
-                Podagatla Rajendra
+                Manideep Daram
               </p>
             </div>
 
