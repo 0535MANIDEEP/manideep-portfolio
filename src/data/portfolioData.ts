@@ -29,7 +29,7 @@ export const projects: Project[] = [
     ],
     techStack: ['TypeScript', 'React', 'Node.js', 'Express', 'JWT', 'REST APIs'],
     github: 'https://github.com/0535MANIDEEP/BloodBankManagementSystem',
-    liveDemo: '#',
+    liveDemo: 'https://bloodbank-portfolio.vercel.app',
     featured: true,
     category: 'Full Stack',
     status: 'completed',
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     ],
     techStack: ['TypeScript', 'React', 'Node.js', 'Express', 'REST APIs', 'Jest'],
     github: 'https://github.com/0535MANIDEEP/sutra-code',
-    liveDemo: '#',
+    liveDemo: 'https://sutra-code-portfolio.vercel.app',
     featured: false,
     category: 'Full Stack',
     status: 'completed',
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     ],
     techStack: ['TypeScript', 'React', 'Node.js', 'Express', 'PostgreSQL', 'Docker', 'Jest', 'Postman'],
     github: 'https://github.com/0535MANIDEEP/HyderabadHustlers-MultilingualMandi',
-    liveDemo: '#',
+    liveDemo: 'https://mandi-portfolio.vercel.app',
     featured: false,
     category: 'Full Stack',
     status: 'completed',
@@ -124,6 +124,80 @@ export const projects: Project[] = [
       { label: 'Languages Supported', value: '3+' },
       { label: 'CSV Throughput', value: '10k+ rows' },
       { label: 'Docker Services', value: '3' },
+    ],
+  },
+  {
+    id: 'ai-code-reviewer',
+    title: 'AI Code Reviewer',
+    shortDescription:
+      'AI-powered code review tool that analyzes code for bugs, warnings, suggestions, and optimizations using OVHcloud AI Endpoints.',
+    description:
+      'A full-stack AI code review application built with React, Vite, and Tailwind CSS. Users paste code in any language and receive structured AI-powered reviews covering bugs, warnings, readability/performance/security suggestions, and optimization opportunities. Backend uses Vercel serverless functions with OVHcloud AI Endpoints (no API keys required).',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
+    ],
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vercel Serverless', 'OVHcloud AI'],
+    github: 'https://github.com/0535MANIDEEP/ai-code-reviewer',
+    liveDemo: 'https://ai-code-reviewer-two-nu.vercel.app',
+    featured: true,
+    category: 'AI/ML',
+    status: 'completed',
+    year: 2025,
+    duration: '1 week',
+    features: [
+      'Multi-language code review (JS, TS, Python, Java, C++, Go, Rust, HTML/CSS)',
+      'Bug detection with severity levels',
+      'Performance and security suggestions',
+      'Code optimization recommendations',
+      'Structured JSON review output',
+      'No API keys required (free AI backend)',
+    ],
+    problemStatement:
+      'Developers need fast, automated code reviews to catch bugs, security issues, and performance problems before shipping code.',
+    architecture:
+      'React/Vite frontend with Vercel serverless API functions proxying to OVHcloud AI Endpoints (mistral-small-3-2-24b-instruct model). No API keys required.',
+    stats: [
+      { label: 'Languages', value: '8+' },
+      { label: 'AI Model', value: 'Mistral 24B' },
+      { label: 'Cost', value: 'Free' },
+    ],
+  },
+  {
+    id: 'ai-study-buddy',
+    title: 'AI Study Buddy',
+    shortDescription:
+      'AI-powered study tool that generates flashcards and quizzes from any topic or text using OVHcloud AI Endpoints.',
+    description:
+      'A full-stack AI study assistant built with React, Vite, Tailwind CSS, and Framer Motion. Users paste any text or topic and instantly get AI-generated flashcards and multiple choice quizzes. Features flip-card animations, progress tracking, accuracy stats, and keyboard shortcuts. Backend uses Vercel serverless functions with OVHcloud AI Endpoints (no API keys required).',
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80',
+    ],
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Vercel Serverless', 'OVHcloud AI'],
+    github: 'https://github.com/0535MANIDEEP/ai-study-buddy',
+    liveDemo: 'https://ai-study-buddy-rho-jet.vercel.app',
+    featured: true,
+    category: 'AI/ML',
+    status: 'completed',
+    year: 2025,
+    duration: '1 week',
+    features: [
+      'Auto-generate 10 flashcards + 5 quiz questions from any text',
+      'Flip-card animations with keyboard shortcuts',
+      'Quiz mode with correct/incorrect feedback and explanations',
+      'Progress tracking (cards studied, accuracy, streak)',
+      'Summary generation',
+      'No API keys required (free AI backend)',
+    ],
+    problemStatement:
+      'Students need efficient tools to convert notes and textbook content into study materials without manual effort.',
+    architecture:
+      'React/Vite frontend with Vercel serverless API functions proxying to OVHcloud AI Endpoints (mistral-small-3-2-24b-instruct model). No API keys required.',
+    stats: [
+      { label: 'Flashcards', value: '10 per session' },
+      { label: 'Quiz Questions', value: '5 per session' },
+      { label: 'Cost', value: 'Free' },
     ],
   },
 ];
